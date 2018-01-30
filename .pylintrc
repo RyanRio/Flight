@@ -253,7 +253,7 @@ method-naming-style=snake_case
 #method-rgx=
 
 # Naming style matching correct module names
-module-naming-style=snake_case
+module-naming-style=PascalCase
 
 # Regular expression matching correct module names. Overrides module-naming-
 # style
@@ -287,12 +287,9 @@ expected-line-ending-format=
 # Regexp for a line that is allowed to be longer than the limit.
 ignore-long-lines=^\s*(# )?<?https?://\S+>?$
 
-# Number of spaces of indent required inside a hanging  or continued line.
-indent-after-paren=4
-
 # String used as indentation unit. This is usually "    " (4 spaces) or "\t" (1
 # tab).
-indent-string='    '
+indent-string="  "
 
 # Maximum number of characters on a single line.
 max-line-length=100
