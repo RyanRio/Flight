@@ -1,4 +1,4 @@
-"""Hack so that we can write python code in peace without the linter complaining"""
+"""Hack so that we can write python code in peace without the linter complaining, delete folder when on pi"""
 
 BOARD = 1
 OUT = 1
@@ -7,17 +7,17 @@ IN = 1
 
 def setmode(gpio_option):
   """ fake function to appease the linter """
-  print gpio_option
+  print (gpio_option)
 
 
 def setup(_a, _b):
   """ fake function to appease the linter """
-  print _a + _b
+  print (_a + _b)
 
 
 def output(_a, _b):
   """ fake function to appease the linter """
-  print _a + _b
+  print (_a + _b)
 
 
 def cleanup():
