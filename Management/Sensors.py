@@ -4,9 +4,21 @@ import RPi.GPIO as GPIO
 
 class GPIOManager():
   """ functionality class """
-  
+
+  """ list of i2c addresses """
+  addresses = []
+
   outChannels = [] 
   inChannels = []
+  QuickWrites = []
+  """ if i2c then include addressses that you are going to use, makes setup easier and furthur use """
+  def __init__(self, addresses=[]):
+    self.addresses = addresses
+  def addAdress(self, address):
+    self.addresses.append(address)
+
+  def bindQuickWrite(self, addressName):
+    self.QuickWrites.append()
 
   def addOutConnections(self, channelArray):
     """ channelArray is of type [channels], type is OUT """
@@ -34,5 +46,8 @@ class GPIOManager():
       print(e)
 
       
-  def getChannels(self):
+  def getInChannels(self):
     return self.inChannels
+
+  def getOutChannels(self):
+    return self.outChannels
